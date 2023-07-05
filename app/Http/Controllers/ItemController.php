@@ -12,7 +12,7 @@ class ItemController extends Controller
      */
     public function index()
     {
-        //
+        return true;
     }
 
     /**
@@ -20,7 +20,7 @@ class ItemController extends Controller
      */
     public function create()
     {
-        //
+        return true;
     }
 
     /**
@@ -28,7 +28,7 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return true;
     }
 
     /**
