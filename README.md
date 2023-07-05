@@ -10,4 +10,15 @@ ECサイト
 - ログイン機能
 - ユーザー登録
 - 商品登録
-- デザイン
+- デザイン（bladeとTailwindCssを使っていく）
+
+
+## ログイン機能
+- Laravel Breeze
+  - ログイン、登録、パスワードのリセット、電子メール検証、パスワード確認を含む、Laravel のすべての認証機能の最小限でシンプルな実装を可能とする
+
+```
+composer require laravel/breeze --dev
+
+php artisan breeze:install react
+```
