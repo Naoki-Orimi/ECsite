@@ -25,9 +25,13 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/top', function () {
+    return Inertia::render('Top');
+})->middleware(['auth', 'verified'])->name('top');
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard'); // ミドルウェアにauth verified をかませて、ログインするように.
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

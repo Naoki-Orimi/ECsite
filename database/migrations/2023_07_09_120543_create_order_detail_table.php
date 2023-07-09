@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('items', function (Blueprint $table) {
+        Schema::create('order_detail', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->integer('price');
-            $table->string('picture_path');
-            $table->string('category_id');
+            $table->string('order_id');
+            $table->json('purchase_info')->comment('KEY: 商品ID(item.id), VALUE: 購入数量'); // 購入情報ハッシュ
             $table->timestamps();
         });
     }
@@ -26,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('items');
+        Schema::dropIfExists('order_detail');
     }
 };
